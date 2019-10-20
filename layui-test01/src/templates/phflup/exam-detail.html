@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>体检详情表</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="../../static/layui/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="../../static/css/detail.css">
+</head>
+<body>
+	<div class="record-head">
+		<div class="head-title">
+			体检详情表
+		</div>
+	</div>
+ 	<div class="form-body">
+ 		<form class="layui-form" action="">
+  		<div class="layui-form-item head-wrap">
+  			<div class="form-head">
+  				<div class="head-info form-way">
+  					<div class="form-info input-box-item">
+	  					<span>姓名：</span>
+	  					<span class="info-name">高文如</span>
+	  				</div>
+	  				<div class="form-date input-box-item head right">
+	  					<span>体检日期：</span>
+	  					<span class="followDate">2019-09-05</span>
+	  				</div>
+	  				<div class="form-place warn-text input-box-item head right">
+	  					<span class="input-box-name">体检地点：</span>
+	  					<span class="followDate">其他</span>
+	  				</div>
+  				</div>
+  				<div class="form-way">
+  					<div class="input-box-item head">
+  						<span class="head-title">责任医生</span>
+	  					<span class="input-box-value">尹玉霞</span>
+	  					</div>
+  					<div class="input-box-item head right">
+	  					<span class="head-title">录入医生</span>
+	  					<span class="input-box-value">尹玉霞</span>
+	  				</div>
+	  				<div class="input-box-item head right">
+	  					<span class="head-title">现场照片</span>
+	  					<img id="openImg" src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1524907079,200373112&fm=58">
+	  				</div>
+  				</div>
+  				
+  			</div>
+  		</div>
+  		<div class="layui-collapse" lay-filter="form-item">
+				<div class="layui-colla-item">
+			    <h2 class="layui-colla-title">
+			    	一般状况
+			    </h2>
+			    <div class="layui-colla-content layui-show">
+            <div class="layui-form-item">
+              <div class="form-box">
+                <span class="form-box-title">检测</span>
+                <div class="form-input-box">
+                  <div class="input-box-item warn-text">
+                    <div>
+                      <span class="input-box-name">体温</span>
+                      <span class="input-box-value">36.4</span>℃
+                    </div>
+                    <div>
+                      <span class="input-box-name">脉率</span>
+                      <span class="input-box-value">101</span>次/分钟
+                    </div>
+                    <div>
+                      <span class="input-box-name">腰围</span>
+                      <span class="input-box-value">68</span>cm
+                    </div>
+                    <div>
+                      <span class="input-box-name">呼吸频率</span>
+                      <span class="input-box-value">20</span>次/分钟
+                    </div>
+                  </div>
+                  <div class="input-box-item warn-text">
+                    <div>
+                      <span class="input-box-name">身高</span>
+                      <span class="input-box-value">167.5</span>cm
+                    </div>
+                    <div>
+                      <span class="input-box-name">体重</span>
+                      <span class="input-box-value">59.2</span>kg
+                    </div>
+                    <div>
+                      <span class="input-box-name">体质指数(BMI)</span>
+                      <span class="input-box-value">21.10</span>kg/m²
+                    </div>
+                  </div>
+                  <div class="input-box-item warn-text">
+                    <div class="item-both">
+                      <span class="input-box-name">左侧血压</span>
+                      <span class="input-box-value">setValue()</span>mmHg
+                    </div>
+                    <div class="item-both">
+                      <span class="input-box-name">右侧血压</span>
+                      <span class="input-box-value">111/68</span>mmHg
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <div class="form-box">
+                <span class="form-box-title">症状</span>
+                <div class="form-input-box" id="zz">
+<!-- -->                
+                  <input type="checkbox" name="" title="无症状" lay-skin="primary"  disabled>
+                  <input type="checkbox" name="" title="头痛" lay-skin="primary" checked disabled> 
+                  <input type="checkbox" name="" title="头晕" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="心悸" lay-skin="primary" disabled> 
+                  <input type="checkbox" name="" title="胸闷" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="胸痛" lay-skin="primary" disabled> 
+                  <input type="checkbox" name="" title="慢性咳嗽" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="咳痰" lay-skin="primary" disabled> 
+                  <input type="checkbox" name="" title="呼吸困难" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="多饮" lay-skin="primary" disabled> 
+                  <input type="checkbox" name="" title="多尿" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="体重下降" lay-skin="primary" disabled> 
+                  <input type="checkbox" name="" title="乏力" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="关节肿痛" lay-skin="primary" disabled> 
+                  <input type="checkbox" name="" title="视力模糊" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="手脚麻木" lay-skin="primary" disabled> 
+                  <input type="checkbox" name="" title="尿急" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="尿痛" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="便秘" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="腹泻" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="恶心呕吐" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="眼花" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="耳鸣" lay-skin="primary" disabled>
+                  <input type="checkbox" name="" title="乳房胀痛" lay-skin="primary" disabled>
+                  <div class="other input-box-item">
+                    <input type="checkbox" name="" title="其他" lay-skin="primary" disabled>
+                    <span class="input-box-value input-rest"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <div class="form-box">
+                <span class="form-box-title">评估</span>
+                <div class="form-input-box">
+                  <div class="input-box-item warn-text">
+                    <div class="item-both">
+                      <span class="input-box-name">老年人健康状态自我评估</span>
+                      <span class="input-box-value">满意</span>
+                    </div>
+                    <div class="item-both">
+                      <span class="input-box-name">老年人生活自理能力自我评估</span>
+                      <span class="input-box-value">可自理（0-3分）</span>
+                    </div>
+                  </div>
+                  <div class="input-box-item">
+                    <div class="item-both">
+                      <span class="input-box-name">老年人认知功能</span>
+                      <span class="input-box-value">粗筛阴性</span>
+                    </div>
+                    <div class="item-both">
+                      <span class="input-box-name">简单智力状态检查</span>
+                      <span class="input-box-value">总分 100</span>
+                    </div>
+                  </div>
+                  <div class="input-box-item">
+                    <div class="item-both">
+                      <span class="input-box-name">老年人情感状态</span>
+                      <span class="input-box-value">粗筛阴性</span>
+                    </div>
+                    <div class="item-both">
+                      <span class="input-box-name">老年人抑郁评分检查</span>
+                      <span class="input-box-value">总分 100</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+			  </div>
+			</div>
+			<div class="layui-collapse" lay-filter="form-item">
+				<div class="layui-colla-item">
+			    <h2 class="layui-colla-title">
+			    	生活方式
+			    </h2>
+			    <div class="layui-colla-content layui-show">
+			    	<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">体育锻炼</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">锻炼频率</span>
+			  							<span class="input-box-value">不锻炼</span>
+			  						</div>
+			  						<div>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">锻炼时间</span>
+			  							<span class="input-box-value">30</span>
+			  							分钟
+			  						</div>
+			  						<div>
+			  							坚持锻炼
+			  							<span class="input-box-value">2</span>
+			  							年
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item other">
+			  						<span class="input-box-title">锻炼方式</span>
+			  						<span class="input-box-value input-rest">打乒乓球</span>
+			  					</div>
+			  				</div>
+			  			</div>
+  					</div>
+  					<div class="layui-form-item">
+  						<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">饮食习惯</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="荤素均衡" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="荤食为主" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="素食为主" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="嗜盐" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="嗜油" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="嗜糖" lay-skin="primary" disabled>
+			  				</div>
+  						</div>
+  					</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">吸烟状况</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">吸烟情况</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value">从不吸烟</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">日吸烟量</span>
+			  						</div>
+			  						<div>
+			  							平均
+			  							<span class="input-box-value">0</span>
+			  							支
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">开始吸烟年龄</span>
+			  							<span class="input-box-value">0</span>
+			  							岁
+			  						</div>
+										<div>
+			  							<span class="input-box-title">戒烟年龄</span>
+			  							<span class="input-box-value">0</span>
+			  							岁
+			  						</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">饮酒情况</span>
+			  				<div class="form-input-box no-warn">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">饮酒频率</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value">偶尔</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">日饮酒量</span>
+			  						</div>
+			  						<div>
+			  							平均
+			  							<span class="input-box-value">1</span>
+			  							两
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">开始饮酒年龄</span>
+			  							<span class="input-box-value">20</span>
+			  							岁
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">是否戒酒</span>
+			  						</div>
+										<div>
+			  							<span class="input-box-value">未戒酒</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">戒酒年龄</span>
+			  							<span class="input-box-value">0</span>
+			  							岁
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">最近一年是否曾醉酒</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value">否</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">饮酒种类</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value">白酒</span>
+			  						</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title">职业病危害因素接触史</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">有无危害</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">工种</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">从业时间</span>
+			  							<span class="input-box-value">0</span>
+			  							年
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">毒品种类</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">粉尘</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">防护措施</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">放射物质</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">防护措施</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">物理因素</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">防护措施</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">化学物质</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">防护措施</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">其他</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">防护措施</span>
+			  							<span class="input-box-value">无</span>
+			  						</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			    </div>
+			  </div>
+			</div>
+			<div class="layui-collapse" lay-filter="form-item">
+				<div class="layui-colla-item">
+			    <h2 class="layui-colla-title">
+			    	查体信息
+			    </h2>
+			    <div class="layui-colla-content layui-show">
+			    	<div class="layui-form-item">
+							<div class="form-box">
+								<span class="form-box-title">脏器功能</span>
+			  				<div class="form-input-box organ">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">口唇</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">红润</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">齿列</span>
+			  						</div>
+			  						<div>
+			  							<input type="checkbox" name="" title="正常" lay-skin="primary" disabled> 
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div>
+			  							<input type="checkbox" name="" title="缺齿" lay-skin="primary" disabled> 
+			  						</div>
+			  						<div>
+			  							左上
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  						<div>
+			  							左下
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  						<div>
+			  							右上
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  						<div>
+			  							右下
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div>
+			  							<input type="checkbox" name="" title="龋齿" lay-skin="primary" disabled> 
+			  						</div>
+			  						<div>
+			  							左上
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  						<div>
+			  							左下
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  						<div>
+			  							右上
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  						<div>
+			  							右下
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div>
+			  							<input type="checkbox" name="" title="义齿(假牙)" lay-skin="primary" checked disabled> 
+			  						</div>
+			  						<div>
+			  							左上
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  						<div>
+			  							左下
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  						<div>
+			  							右上
+			  							<span class="input-box-value">5</span>
+			  						</div>
+			  						<div>
+			  							右下
+			  							<span class="input-box-value">0</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">咽部</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无充血</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">视力</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">左眼</span>
+			  							<span class="input-box-value">0.9</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">右眼</span>
+			  							<span class="input-box-value">1.0</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">矫正视力左眼</span>
+			  							<span class="input-box-value">1.0</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-title">矫正视力右眼</span>
+			  							<span class="input-box-value">1.0</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">听力</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">听见</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">运动功能</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">可顺利完成</span>
+			  						</div>
+			  					</div>
+			  				</div>
+							</div>
+			  		</div>
+			  		<div class="layui-form-item">
+							<div class="form-box">
+								<span class="form-box-title"></span>
+			  				<div class="form-input-box organ warn-text">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title input-box-name">眼底</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">正常</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title input-box-name">皮肤</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">正常</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title input-box-name">巩膜</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">正常</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title input-box-name">淋巴结</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">未触及</span>
+			  						</div>
+			  					</div>
+			  				</div>
+							</div>
+			  		</div>
+			  		<div class="layui-form-item">
+							<div class="form-box">
+								<span class="form-box-title">肺部</span>
+			  				<div class="form-input-box organ">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">桶状胸</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">否</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">呼吸音</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">正常</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">罗音</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无</span>
+			  						</div>
+			  					</div>
+			  				</div>
+							</div>
+			  		</div>
+			  		<div class="layui-form-item">
+							<div class="form-box warn-text">
+								<span class="form-box-title input-box-name">心脏</span>
+			  				<div class="form-input-box organ no-warn">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">心率(次/每分钟)</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">101</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">心律</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">齐</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">杂音</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无</span>
+			  						</div>
+			  					</div>
+			  				</div>
+							</div>
+			  		</div>
+			  		<div class="layui-form-item">
+							<div class="form-box">
+								<span class="form-box-title">腹部</span>
+			  				<div class="form-input-box organ">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">压痛</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">包块</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">肝大</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">脾大</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">移动性浊音</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无</span>
+			  						</div>
+			  					</div>
+			  				</div>
+							</div>
+			  		</div>
+			  		<div class="layui-form-item">
+							<div class="form-box warn-text">
+								<span class="form-box-title"></span>
+			  				<div class="form-input-box organ">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title input-box-name">足背动脉搏动</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">触及双侧对称</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title input-box-name">下肢水肿</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">无</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title">肛门指诊</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-value input-rest">未及异常</span>
+			  						</div>
+			  					</div>
+			  				</div>
+							</div>
+			  		</div>
+			  		<div class="layui-form-item">
+							<div class="form-box">
+								<span class="form-box-title"></span>
+			  				<div class="form-input-box organ">
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title input-box-name">乳腺</span>
+			  						</div>
+			  						<input type="checkbox" name="" title="未见异常" lay-skin="primary" checked disabled>
+			  						<input type="checkbox" name="" title="乳房切除" lay-skin="primary" disabled>
+			  						<input type="checkbox" name="" title="异常泌乳" lay-skin="primary" disabled>
+			  						<input type="checkbox" name="" title="乳腺包块" lay-skin="primary" disabled>
+			  						<div class="other after-checkbox">
+			  							<input type="checkbox" name="" title="其他" lay-skin="primary" disabled>
+			  							<span class="input-box-value input-rest"></span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  							<span class="input-box-title input-box-name">妇科</span>
+			  						</div>
+			  						<div class="after-checkbox other">
+			  							<span class="input-box-title">外阴</span>
+			  							<span class="input-box-value input-rest">未见异常</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div class="after-checkbox other">
+			  							<span class="input-box-title">阴道</span>
+			  							<span class="input-box-value input-rest">未及异常</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div class="after-checkbox other">
+			  							<span class="input-box-title">宫颈</span>
+			  							<span class="input-box-value input-rest">未及异常</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div class="after-checkbox other">
+			  							<span class="input-box-title">宫体</span>
+			  							<span class="input-box-value input-rest">未及异常</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div>
+			  						</div>
+			  						<div class="after-checkbox other">
+			  							<span class="input-box-title">附件</span>
+			  							<span class="input-box-value input-rest">未及异常</span>
+			  						</div>
+			  					</div>
+			  				</div>
+							</div>
+			  		</div>
+			  		<div class="layui-form-item">
+							<div class="form-input-box">
+								<div class="input-box-item">
+									<div>
+										<div class="other reason-other">
+											<span class="input-box-title">其他</span>
+											<span class="input-box-value input-rest">未及异常</span>
+										</div>
+									</div>
+								</div>
+							</div>
+			  		</div>
+			    </div>
+			  </div>
+			</div>
+			<div class="layui-collapse" lay-filter="form-item">
+				<div class="layui-colla-item">
+			    <h2 class="layui-colla-title">
+			    	辅助检查
+			    </h2>
+			    <div class="layui-colla-content layui-show">
+			    	<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title">辅助检查</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-name">空腹血糖</span>
+			  							<span class="input-box-value">9.2</span>mmol/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">糖化血红蛋白</span>
+			  							<span class="input-box-value">6.6</span>%
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">尿微量白蛋白</span>
+			  							<span class="input-box-value">0</span>mg/dL
+			  						</div>
+			  					</div>
+			  				</div>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name">血常规</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血红蛋白</span>
+			  							<span class="input-box-value">139</span>g/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血小板</span>
+			  							<span class="input-box-value">158</span>×10^9/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">白细胞</span>
+			  							<span class="input-box-value">6.20</span>×10^9/L
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div></div>
+			  						<div>
+			  							<span class="input-box-name">WBC分类 嗜中性粒</span>
+			  							<span class="input-box-value">67.5</span>%
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">淋巴</span>
+			  							<span class="input-box-value">22.7</span>%
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">中间细胞群</span>
+			  							<span class="input-box-value">9.8</span>%
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div></div>
+			  						<div>
+			  							<div class="other">
+				  							<span class="input-box-title">其他</span>
+				  							<span class="input-box-value input-rest"></span>
+				  						</div>
+			  						</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title"></span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name">尿常规</span>
+			  							<span class="input-box-value">正常</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">尿蛋白</span>
+			  							<span class="input-box-value">-</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">尿糖</span>
+			  							<span class="input-box-value">-</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">尿酮体</span>
+			  							<span class="input-box-value">-</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">尿潜血</span>
+			  							<span class="input-box-value">-</span>
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item warn-text">
+			  						<div>
+			  							<span class="input-box-title input-box-name"></span>
+			  						</div>
+										<div class="other reason-other">
+			  							<span class="input-box-title">其他</span>
+			  							<span class="input-box-value input-rest"></span>
+			  						</div>
+			  						<div></div>
+			  						<div></div>
+			  						<div></div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title"></span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name">血脂</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">总胆固醇</span>
+			  							<span class="input-box-value">3</span> mmol/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血清低密度蛋白胆固醇</span>
+			  							<span class="input-box-value">1.07</span> mmol/L
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name"></span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">甘油三酯</span>
+			  							<span class="input-box-value">1.03</span> mmol/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血清高密度蛋白胆固醇</span>
+			  							<span class="input-box-value">1.10</span> mmol/L
+			  						</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title"></span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name">肾功能</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血清肌酐</span>
+			  							<span class="input-box-value">67.3</span> μmol/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血尿素</span>
+			  							<span class="input-box-value">5.92</span> mmol/L
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name"></span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血钾浓度</span>
+			  							<span class="input-box-value">60.0</span> mmol/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血钠浓度</span>
+			  							<span class="input-box-value">20.0</span> mmol/L
+			  						</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title"></span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name">肝功能</span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血清谷丙转氨酶</span>
+			  							<span class="input-box-value">20.9</span> U/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">结合胆红素</span>
+			  							<span class="input-box-value">2.6</span> μmol/L
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name"></span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">血清谷草转氨酶</span>
+			  							<span class="input-box-value">22.6</span> U/L
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">总胆红素</span>
+			  							<span class="input-box-value">9.19</span> μmol/L
+			  						</div>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<div class="warn-text">
+			  							<span class="input-box-title input-box-name"></span>
+			  						</div>
+			  						<div>
+			  							<span class="input-box-name">白蛋白</span>
+			  							<span class="input-box-value">45.5</span> g/L
+			  						</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name"></span>
+			  				<div class="form-input-box organ">
+			  					<div class="input-box-item reason-other">
+			  						<div>
+			  							<span class="input-box-title">心电图</span>
+			  						</div>
+			  						<span class="input-box-value input-rest">正常</span>
+			  					</div>
+			  					<div class="input-box-item reason-other">
+			  						<div>
+			  							<span class="input-box-title">腹部B超</span>
+			  						</div>
+			  						<span class="input-box-value input-rest">正常</span>
+			  					</div>
+			  					<div class="input-box-item reason-other">
+			  						<div>
+			  							<span class="input-box-title">B超(其他)</span>
+			  						</div>
+			  						<span class="input-box-value input-rest">正常</span>
+			  					</div>
+			  					<div class="input-box-item reason-other">
+			  						<div>
+			  							<span class="input-box-title">胸部X线片</span>
+			  						</div>
+			  						<span class="input-box-value input-rest">正常</span>
+			  					</div>
+			  					<div class="input-box-item reason-other">
+			  						<div>
+			  							<span class="input-box-title">宫颈涂片</span>
+			  						</div>
+			  							<span class="input-box-value input-rest">正常</span>
+			  					</div>
+			  					<div class="input-box-item reason-other">
+			  						<div>
+			  							<span class="input-box-title">大便潜血</span>
+			  						</div>
+			  							<span class="input-box-value input-rest">阴性</span>
+			  					</div>
+			  					<div class="input-box-item reason-other">
+			  						<div>
+			  							<span class="input-box-title">乙型肝炎表面抗原</span>
+			  						</div>
+			  							<span class="input-box-value input-rest">阴性</span>
+			  					</div>
+			  					<div class="input-box-item other">
+			  						<span class="input-box-title">其他</span>
+			  						<span class="input-box-value input-rest"></span>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			    </div>
+			  </div>
+			</div>
+			<div class="layui-collapse" lay-filter="form-item">
+				<div class="layui-colla-item">
+			    <h2 class="layui-colla-title">
+			    	健康问题
+			    </h2>
+			    <div class="layui-colla-content layui-show">
+			    	<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">脑血管疾病</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="未发现" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="缺血性卒中" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="脑出血" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="蛛网膜下腔出血" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="短暂性脑缺血发作" lay-skin="primary" disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">肾脏疾病</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="未发现" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="糖尿病肾病" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="肾功能衰竭" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="急性肾炎" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="慢性肾炎" lay-skin="primary" disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">心脏疾病</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="未发现" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="心肌梗死" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="心绞痛" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="冠状动脉血运重建" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="充血性心力衰竭" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="心前区疼痛" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="冠心病" lay-skin="primary" disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">血管疾病</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="未发现" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="高血压" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="夹层动脉瘤" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="动脉闭塞性疾病" lay-skin="primary" disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">眼部疾病</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="未发现" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="视网膜出血或渗出" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="视乳头水肿" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="白内障" lay-skin="primary" disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">神经系统疾病</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="未发现" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="严重精神障碍" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="阿尔茨海默症" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="帕金森病" lay-skin="primary" disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">内分泌及代谢疾病</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="未发现" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="糖尿病" lay-skin="primary" disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">其他系统疾病</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="未发现" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="慢性支气管炎" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="慢性阻塞性肺气肿" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="恶性肿瘤" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="老年性骨关节病" lay-skin="primary" disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			    </div>
+			  </div>
+			</div>
+			<div class="layui-collapse" lay-filter="form-item">
+				<div class="layui-colla-item">
+			    <h2 class="layui-colla-title">
+			    	治疗情况
+			    </h2>
+			    <div class="layui-colla-content layui-show">
+			    	<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title">住院史</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<span class="center-title">入/出院时间</span>
+			  						<span class="input-box-value center-value">2019-09-01</span>
+			  						<span class="input-box-value center-value">2019-09-19</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="center-title">原因</span>
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="center-title hospital">医疗机构名称</span>
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="center-title">病案号</span>
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title">家庭病床史</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<span class="center-title">建/撤床时间</span>
+			  						<span class="input-box-value center-value">2019-09-01</span>
+			  						<span class="input-box-value center-value">2019-09-19</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="center-title">原因</span>
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="center-title hospital">医疗机构名称</span>
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="center-title">病案号</span>
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title">用药情况</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<span class="center-title hospital">药物名称</span>
+			  						<span class="center-title">用法</span>
+			  						<span class="center-title">用量</span>
+			  						<span class="center-title">用药时间</span>
+			  						<span class="center-title">服药依从性</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">药物1</span>
+			  						<span class="input-box-value center-value">口服</span>
+			  						<span class="input-box-value center-value">2片</span>
+			  						<span class="input-box-value center-value">早、中、晚各一次</span>
+			  						<span class="input-box-value center-value">规律</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">药物2</span>
+			  						<span class="input-box-value center-value">口服</span>
+			  						<span class="input-box-value center-value">2片</span>
+			  						<span class="input-box-value center-value">早、中、晚各一次</span>
+			  						<span class="input-box-value center-value">规律</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">药物3</span>
+			  						<span class="input-box-value center-value">口服</span>
+			  						<span class="input-box-value center-value">2片</span>
+			  						<span class="input-box-value center-value">早、中、晚各一次</span>
+			  						<span class="input-box-value center-value">规律</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">药物4</span>
+			  						<span class="input-box-value center-value">口服</span>
+			  						<span class="input-box-value center-value">2片</span>
+			  						<span class="input-box-value center-value">早、中、晚各一次</span>
+			  						<span class="input-box-value center-value">规律</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">药物5</span>
+			  						<span class="input-box-value center-value">口服</span>
+			  						<span class="input-box-value center-value">2片</span>
+			  						<span class="input-box-value center-value">早、中、晚各一次</span>
+			  						<span class="input-box-value center-value">规律</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">药物6</span>
+			  						<span class="input-box-value center-value">口服</span>
+			  						<span class="input-box-value center-value">2片</span>
+			  						<span class="input-box-value center-value">早、中、晚各一次</span>
+			  						<span class="input-box-value center-value">规律</span>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title">非免疫规划预防接种史</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<span class="center-title">名称</span>
+			  						<span class="center-title">接种日期</span>
+			  						<span class="center-title">接种机构</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">2019-09-19</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">2019-09-19</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  					<div class="input-box-item">
+			  						<span class="input-box-value center-value">1</span>
+			  						<span class="input-box-value center-value">2019-09-19</span>
+			  						<span class="input-box-value center-value">1</span>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			    </div>
+			  </div>
+			</div>
+			<div class="layui-collapse" lay-filter="form-item">
+				<div class="layui-colla-item">
+			    <h2 class="layui-colla-title">
+			    	健康评价
+			    </h2>
+			    <div class="layui-colla-content layui-show">
+			    	<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">健康评价</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="体检无异常" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="有异常" lay-skin="primary" checked disabled>
+									<div class="other input-box-item">
+										<span class="input-box-name">异常1</span>
+										<span class="input-box-value input-rest">不锻炼</span>
+									</div>
+									<div class="other input-box-item">
+										<span class="input-box-name">异常2</span>
+										<span class="input-box-value input-rest">高血压</span>
+									</div>
+									<div class="other input-box-item">
+										<span class="input-box-name">异常3</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+									<div class="other input-box-item">
+										<span class="input-box-name">异常4</span>
+										<span class="input-box-value input-rest">缺血性卒中、严重精神障碍</span>
+									</div>
+									<div class="other input-box-item">
+										<span class="input-box-name">异常5</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+									<div class="other input-box-item">
+										<span class="input-box-name">异常6</span>
+										<span class="input-box-value input-rest">糖尿病</span>
+									</div>
+									<div class="other input-box-item">
+										<span class="input-box-name">异常7</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box warn-text">
+			  				<span class="form-box-title input-box-name">健康指导</span>
+			  				<div class="form-input-box no-warn">
+			  					<input type="checkbox" name="" title="纳入慢性病管理" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="建议复查" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="建议转诊" lay-skin="primary" disabled>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title">危险因素控制</span>
+			  				<div class="form-input-box">
+									<input type="checkbox" name="" title="戒烟" lay-skin="primary" disabled>
+									<input type="checkbox" name="" title="健康饮酒" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="饮食" lay-skin="primary" disabled>
+			  					<input type="checkbox" name="" title="锻炼" lay-skin="primary" checked disabled>
+									<input type="checkbox" name="" title="减腰围" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="减体重" lay-skin="primary" disabled>
+									<div class="checkbox-item">
+										<span class="checkbox-title">目标(Kg)</span>
+										<span class="checkbox-value">60</span>
+									</div>
+									<input type="checkbox" name="" title="健康教育" lay-skin="primary" disabled> 
+									<input type="checkbox" name="" title="建议接种疫苗" lay-skin="primary" disabled>
+									<div class="checkbox-item noleft">
+										<span class="checkbox-title"></span>
+										<span class="checkbox-value">60</span>
+									</div>
+									<div class="other input-box-item">
+										<span class="input-box-name">其他</span>
+										<span class="input-box-value input-rest"></span>
+									</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  		<div class="layui-form-item">
+			  			<div class="form-box">
+			  				<span class="form-box-title">备注</span>
+			  				<div class="form-input-box">
+			  					<div class="input-box-item">
+			  						<span class="input-box-value input-rest"></span>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			    </div>
+			  </div>
+			</div>		
+  	</form>
+ 	</div>
+<script src="../../static/layui/layui/layui.js"></script>
+<script type="text/javascript">
+	layui.use(['form', 'element', 'layer'], function () {
+	  var form = layui.form
+	  var element = layui.element
+	  var layer = layui.layer
+
+
+	//解析格式	
+		var htmlStr = "{&quot;other&quot;:&quot;&quot;,&quot;value&quot;:&quot;无症状,&quot;}"
+		var hide = document.createElement('div')
+		hide.innerHTML = htmlStr
+		res = JSON.parse(hide.innerHTML)
+		value = res.value
+
+	//获取复选框数组
+	  var zzInput = document.querySelectorAll('#zz input')
+	  zzInput = Array.prototype.slice.call(zzInput)
+	  zzInput.forEach((item, index) => {
+	  	//重置选中状态
+	  	item.checked = false
+	  	if (value.indexOf(item.title) !== -1) {
+	  		item.checked = true
+	  	}
+	  })
+	//layui需要重新渲染
+	  form.render('checkbox')
+	})
+	window.onload = function () {
+	
+		var openImg = document.getElementById('openImg')
+  	openImg.addEventListener('click', function () {
+  		window.open(openImg.src)
+  	})
+	  var span = document.querySelectorAll('.form-box .layui-form-checkbox span')
+	  for (let i=0; i<span.length; i++) {
+	    span[i].setAttribute('title', span[i].innerHTML)
+	  }
+
+	
+	  /*
+	  console.log(zzArr)*/
+	  /*zzInput.forEach()*/
+	}
+
+	function setValue(){
+		return "zxq test"
+	}
+</script>
+</html>

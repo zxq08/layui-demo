@@ -1,0 +1,153 @@
+.header{
+	width: 100%;
+	height: 8rem;
+	background: #283665;
+	margin-bottom: .25rem;
+}
+.header > .header-top{
+	width: 100%;
+	height: 1.75rem;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-size: .9rem;
+}
+.header-top .iconfont{
+	font-size: 1.2rem;
+	position: absolute;
+	left: .75rem;
+}
+.header > .header-top span{
+	margin: 0 auto;
+}
+.header > .header-main{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 6.25rem;
+}
+.header-avater{
+	width: 3.5rem;
+	height: 3.5rem;
+	margin-left: 1.6rem;
+	border-radius: .4rem;
+	background: rgba(0, 0, 0, .2);
+	overflow: hidden;
+}
+.header-avater img{
+	width: 100%;
+	height: 100%;
+}
+.header-info{
+	margin-left: .8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 3.5rem;
+	color: #f8b62e;
+}
+.header-info .info-name,
+.content-title h2
+{
+	font-size: 1rem;
+}
+.header-info .info-number,
+.content-wrap li
+{
+	font-size: .7rem;
+}
+.content{
+	width: 100%;
+}
+.content-item{
+	margin: 2rem 1.25rem 0;
+	border-bottom: 1px solid #b5b5b5;
+}
+.content-wrap ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.content-wrap li{
+	width: 50%;
+	height: 3.25rem;
+	line-height: 3.25rem;
+	border-bottom: 1px solid #ebebeb;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.content-wrap li span:first-child{
+	display: inline-block;
+  min-width: 2.5rem;
+}
+.body-analysis li span:first-child,
+.effect-heart li span:first-child{
+	margin-right: .5rem;
+}
+.heart-img{
+	width: 100%;
+	height: 9rem;
+	background: #acacac;
+	margin: 1rem 0;
+}
+.content-wrap .conclusion{
+	font-size: .7rem;
+	margin-bottom: 1rem;
+}
+.error-img-class{
+	box-sizing: border-box;
+	width: 100%;
+	height: 9rem;
+	padding: 3.75rem 45%;
+	margin: 1rem 0;
+}
+.report-footer{
+	margin: 0 1.25rem 0;
+	width: auto;
+}
+.report-footer .tips{
+	line-height: 1.5rem;
+	font-size: .7rem;
+	margin-bottom: 1.5rem;
+}
+.report-footer .tips:first-child{
+	margin-top: 1.5rem;
+}
+.tips > h2{
+	line-height: 3rem;
+	color: #283665;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+#origin-img {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+#origin-img .swiper-slide img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.swiper-pagination {
+  top: 1em;
+  bottom: auto;
+  color: #fff;
+}
+
+.upload {
+  position: absolute;
+  bottom: 0;
+  line-height: 3em;
+  background: rgba(0, 0, 0, .5);
+  z-index: 5;
+  color: #fff;
+  text-indent: 1em;
+  width: 100%;
+}

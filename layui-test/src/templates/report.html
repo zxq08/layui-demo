@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>个人体检报告</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/report.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/iconfont.css">
+	<!-- 0910 add -->
+	<style type="text/css" media="print">
+		.person-info{
+			display: none;
+		}
+		.person-print-info{
+			display: block;
+		}
+		.report-header{
+			display: none;
+		}
+		.basic-info,
+		.report-footer
+		{
+			width: 90%;
+		}
+		.basic-info .content img{
+			height: 47vw;
+		}
+		.basic-title,
+		.tips h2
+		{
+			font-size: 14px;
+		}
+		.content > li,
+		.heart-content>p,
+		.report-footer .tips
+		{
+			font-size: 12px;
+		}
+	</style>
+	<!-- 0910 add -->
+</head>
+<body>
+	<div class="report-container">
+		<div class="report-header">
+			<div class="report-info">
+				<span class="report-person-name">张家辉</span>
+				<img class="avatar" src="../static/images/avatar.png" onerror="onerror='';this.src='../static/images/avatar-error.png'">
+				<i class="icon iconfont" id="exit-wrap">&#xe624;
+					<div class="exit" id="exit" onclick="window.history.back(-1)">
+						退出
+					</div>
+				</i>
+			</div>
+		</div>
+		<div class="report-content">
+			<div class="content-title">
+				<img class="content-title-img" src="../static/images/title.png">
+				<h1>健康小屋健康自助体检报告</h1>
+			</div>
+			<div class="person-info">
+				<div class="person-name">
+					<img src="../static/images/person.png">
+					<span>张家辉</span>
+				</div>
+				<div class="person-sex">
+					<i class="icon iconfont">&#xe61c;</i>
+					<span>男</span>
+				</div>
+				<div class="person-birthday">
+					<i class="icon iconfont">&#xe615;</i>
+					<span>1999-12-11</span>
+				</div>
+				<div class="person-phone">
+					<i class="icon iconfont">&#xe62f;</i>
+					<span>13111110029</span>
+				</div>
+				<div class="person-idcard">
+					<i class="icon iconfont">&#xe61a;</i>
+					<span>138765498087253648</span>
+				</div>
+				<div class="person-address">
+					<i class="icon iconfont">&#xe60d;</i>
+					<span>北京市朝阳区望京合生麒麟社1号楼2501</span>
+				</div>
+				<button class="print" id="print">打印报告</button>
+			</div>
+			<div class="person-print-info">
+				<div class="basic-info">
+					<ul class="basic-content content">
+						<li>
+							<span class="target">姓名：</span>
+							<span class="value">张家辉</span>
+						</li>
+						<li>
+							<span class="target">性别：</span>
+							<span class="value">男</span>
+						</li>
+						<li>
+							<span class="target">电话：</span>
+							<span class="value">13111110029</span>
+						</li>
+						<li>
+							<span class="target">出生日期：</span>
+							<span class="value">2010-10-20</span>
+						</li>
+						<li>
+							<span class="target">身份证：</span>
+							<span class="value">138765498087253648</span>
+						</li>
+						<li class="alone">
+							<span class="target">住址：</span>
+							<span class="value">北京市朝阳区望京合生麒麟社1号楼2501</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="basic-info">
+				<h2 class="basic-title">基本信息</h2>
+				<ul class="basic-content content">
+					<li>
+						<span class="target">血压</span>
+						<span class="value">150/90</span> mmHg
+					</li>
+					<li>
+						<span class="target">血糖</span>
+						<span class="value">1.6</span> mmol/L
+					</li>
+					<li>
+						<span class="target">脉搏(心率)</span>
+						<span class="value">80</span> 次每秒
+					</li>
+					<li>
+						<span class="target">身高</span>
+						<span class="value">180.0</span> cm
+					</li>
+					<li>
+						<span class="target">体重</span>
+						<span class="value">84.1</span> kg
+					</li>
+					<li>
+						<span class="target">体质指数</span>
+						<span class="value">25.12</span>
+					</li>
+					<li>
+						<span class="target">血氧</span>
+						<span class="value">97.0</span> %
+					</li>
+					<li>
+						<span class="target">体温</span>
+						<span class="value">36.0</span> ℃
+					</li>
+				</ul>
+			</div>
+			<div class="basic-info">
+				<h2 class="basic-title">心电数据</h2>
+				<ul class="heart-content content">
+					<img src="" onerror="onerror='';this.src='../static/images/img-error.png';this.className='error-img-class'">
+					<p>结论：窦性心律不齐</p>
+				</ul>
+			</div>
+			<div class="basic-info">
+				<h2 class="basic-title">尿液分析</h2>
+				<ul class="basic-content content">
+					<li>
+						<span class="target">葡萄糖</span>
+						<span class="value">150/90</span>
+					</li>
+					<li>
+						<span class="target">酮体</span>
+						<span class="value">1.6</span>
+					</li>
+					<li>
+						<span class="target">比重值</span>
+						<span class="value">80</span>
+					</li>
+					<li>
+						<span class="target">红细胞</span>
+						<span class="value">180.0</span>
+					</li>
+					<li>
+						<span class="target">PH</span>
+						<span class="value">84.1</span>
+					</li>
+					<li>
+						<span class="target">白蛋白</span>
+						<span class="value">25.12</span>
+					</li>
+					<li>
+						<span class="target">尿胆原</span>
+						<span class="value">97.0</span>
+					</li>
+					<li>
+						<span class="target">硝酸盐</span>
+						<span class="value">36.0</span>
+					</li>
+					<li>
+						<span class="target">白细胞</span>
+						<span class="value">36.0</span>
+					</li>
+				</ul>
+			</div>
+			<div class="basic-info">
+				<h2 class="basic-title">人体成分分析</h2>
+				<ul class="basic-content content">
+					<li>
+						<span class="target">体脂肪量</span>
+						<span class="value">150/90</span> kg
+					</li>
+					<li>
+						<span class="target">体脂肪率</span>
+						<span class="value">1.6</span> %
+					</li>
+					<li>
+						<span class="target">除脂肪量</span>
+						<span class="value">80</span> %
+					</li>
+					<li>
+						<span class="target">体水分量</span>
+						<span class="value">180.0</span> kg
+					</li>
+					<li>
+						<span class="target">体水分率</span>
+						<span class="value">84.1</span> %
+					</li>
+					<li>
+						<span class="target">体骨骼量</span>
+						<span class="value">25.12</span> kg
+					</li>
+					<li>
+						<span class="target">体肌肉量</span>
+						<span class="value">97.0</span> kg
+					</li>
+					<li>
+						<span class="target">细胞外液</span>
+						<span class="value">36.0</span> kg
+					</li>
+					<li>
+						<span class="target">细胞内液</span>
+						<span class="value">36.0</span> kg
+					</li>
+					<li>
+						<span class="target">蛋白质量</span>
+						<span class="value">36.0</span> kg
+					</li>
+					<li>
+						<span class="target">矿物质量</span>
+						<span class="value">36.0</span> kg
+					</li>
+					<li>
+						<span class="target">其他成分</span>
+						<span class="value">36.0</span> kg
+					</li>
+					<li>
+						<span class="target">基础代谢</span>
+						<span class="value">36.0</span> Kcal
+					</li>
+					<li>
+						<span class="target">脂肪调节</span>
+						<span class="value">36.0</span> kg
+					</li>
+					<li>
+						<span class="target">肌肉调节</span>
+						<span class="value">36.0</span> kg
+					</li>
+				</ul>
+			</div>
+			<div class="basic-info">
+				<h2 class="basic-title">有效心率</h2>
+				<ul class="basic-content content">
+					<li>
+						<span class="target">最小心率</span>
+						<span class="value">54</span> 
+					</li>
+					<li>
+						<span class="target">最大心率</span>
+						<span class="value">89</span>
+					</li>
+					<li>
+						<span class="target">有效时间</span>
+						<span class="value">0</span>
+					</li>
+					<li>
+						<span class="target">有效范围</span>
+						<span class="value">112--149</span>
+					</li>
+					<li>
+				</ul>
+			</div>
+		</div>
+		<div class="report-footer">
+			<div class="tips">
+				<h2>影响体检结果的因素</h2>
+				<p>① 精神紧张、兴奋过度、睡眠不足等可以影响心率和血压；</p>
+				<p>② 体检前一天的饮食、饮酒可以影响到血糖、血脂和血尿酸变化；</p>
+				<p>③ 高血压、糖尿病患者在服药前后检查结果差异很大，还有一些药物会影响肝功能；</p>
+				<p>④ 女性经期及前后可因污染使尿中出现较多的红细胞。</p>
+				</p>
+			</div>
+			<div class="tips">
+				<h2>怎样看待体检的异常指标</h2>
+				<p>现有的异常指标，有些对疾病有诊断意义，有些可以为进一步检查提供线索，有些只是受到前面讲的一些影响因素而出现的‘异常’。对这些‘异常’指标，医生会根据病史和各项检查综合分析，给您提出进一步检查和防病治病建议。另外各项检查结果都是动态变化的。以后复查这些项目时，由于身体、环境和其他方面的变化，结果也可能会有所不同，遇到这种情况请您与我们联系。；</p>
+				</p>
+			</div>
+			<div class="tips">
+				<h2>怎样判断常见的体检指标</h2>
+				<p>心率：正常人为窦性心律，心率在60~100次/分，小于60次/分为窦性心动过缓，大于100次/分为窦性心动过速。</p>
+				</p>
+			</div>
+			<div class="tips">
+				<h2>血压</h2>
+				<p>正常血压：收缩压＜130mmHg、舒张压＜85mmHg</p>
+				<p>高血压：收缩压≥140mmHg或（和）舒张压≥90mmHg</p>
+				<p>低血压：收缩压≤90mmHg或（和）舒张压≤60mmHg</p>
+				</p>
+			</div>
+			<div class="tips">
+				<h2>体重</h2>
+				<p>理想体重（kg）=身高（cm）-110；或等于身高减去100乘以0.9（男性）或0.85（女性）。实际体重超过理想体重20%者为肥胖，超过10%又不到20%者为超重。</p>
+				<p>随着年龄和身体健康状况的变化，各项检查结果都会发生动态改变，建议您定期体检，对本次检查出的异常结果要定期复查。</p>
+				</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	 	window.onload = function () {
+	 		document.getElementById('exit-wrap').addEventListener('click', function () {
+	 			var exit = document.getElementById('exit')
+	 			if (exit.className.indexOf("show") < 0) {
+	 				exit.className = "exit show"
+	 			} else {
+	 				exit.className = "exit"
+	 			}
+	 		})
+	 		document.getElementById('print').addEventListener('click', function () {
+	 			window.print()
+	 		})
+//0912 add
+	 		//初始化监听鼠标
+	 		initScreenSaver();
+	 	}
+
+//0912 add
+	 	function ScreenSaver(settings){     
+ 
+	    this.settings = settings;     
+	    
+	    this.nTimeout = this.settings.timeout;     
+	                 
+	    document.body.screenSaver = this;     
+	    // link in to body events     
+	    document.body.onmousemove = ScreenSaver.prototype.onevent;     
+	    document.body.onmousedown = ScreenSaver.prototype.onevent;     
+	    document.body.onkeydown = ScreenSaver.prototype.onevent;     
+	    document.body.onkeypress = ScreenSaver.prototype.onevent;     
+	         
+	    var pThis = this;     
+	    var f = function(){pThis.timeout();}     
+	    this.timerID = window.setTimeout(f, this.nTimeout);     
+		}     
+		ScreenSaver.prototype.timeout = function(){     
+		    if ( !this.saver ){
+		      window.history.back(-1) 
+		    }     
+		}     
+		ScreenSaver.prototype.signal = function(){     
+		    if ( this.saver ){     
+		      this.saver.stop();     
+		    }     
+		         
+		    window.clearTimeout(this.timerID);     
+		         
+		    var pThis = this;     
+		    var f = function(){pThis.timeout();}     
+		    this.timerID = window.setTimeout(f, this.nTimeout);     
+		}     
+		    
+		ScreenSaver.prototype.onevent = function(e){     
+		    this.screenSaver.signal();     
+		}     
+		    
+		    
+		var saver;     
+		function initScreenSaver(){
+		    saver = new ScreenSaver({timeout:20000});   //无动作时间  
+		}    
+//0912 add
+	</script>
+</body>
+</html>

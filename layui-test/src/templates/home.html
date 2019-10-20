@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>首页</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		.home-img{
+			display: inline-block;
+			margin: 0 10%;
+			width: 80%;
+			height: auto;
+		}
+		.for-wait{
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 100vh;
+			background: #000;
+			opacity: 0.5;
+			z-index: 999;
+		}
+		.wait-div{
+			position: absolute;
+			left: 40%;
+			top: 65%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.wait-div > p{
+			text-align: center;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 50px;
+		}
+		.error-div{
+			position: absolute;
+			left: 40%;
+			top: 30%;
+			width: 400px;
+			height: 250px;
+			background: #fff;
+			color: #000;
+			text-align: center;
+			line-height: 50px;
+			z-index: 1000;
+		}
+		.error-btn{
+			width: 120px;
+			height: 40px;
+			line-height: 40px;
+			color: #fff;
+			background: #283665;
+			text-align: center;
+			position: relative;
+			left: 140px;
+			top: 80px;
+			cursor: pointer;
+		}
+		.error-span{
+			display: inline-block;
+    	margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+  <img src="../static/images/home_bg.jpg" class="home-img">
+  <div class="wait-div"></div>
+  <object id="CertCtl" type="application/cert-reader" width="0" height="0"></object>
+  <script src="../static/jquery/jquery.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			var CertCtl = document.getElementById("CertCtl")
+			try{
+				//设备连接
+				var conn = CertCtl.connect()
+				//获取连接状态
+				var open = CertCtl.getStatus()
+				conn = JSON.parse(conn)
+				open = JSON.parse(open) 
+				if (conn && open) {
+					/*console.log(conn)
+					console.log(open)*/
+					var idConetent = {}
+					if (conn.resultFlag === 0 && open.resultFlag === 0) {
+						//成功
+						//获取idcard
+						var int = setInterval(function () {
+							var readRes = CertCtl.readCert()
+							readRes = JSON.parse(readRes)
+							if (readRes.resultFlag === 0) {
+								//连接成功返回身份证信息
+								window.clearInterval(int)
+								idConetent = readRes.resultContent
+								idConetent = {"certNumber": idConetent.certNumber}
+								if (idConetent) {
+									console.log(idConetent)	
+									//拿到userid跳转前需要等待
+									showWait()								
+									//用Idcard换userid
+									$.ajax({
+										url: "./res.json",//"/hHouse/verify",
+										type: "POST",
+										contentType: "application/json",
+                		dataType:"json",
+										data: JSON.stringify(idConetent),
+										success: function (data) {
+											console.log(data)
+											if (data.status === "success") {
+												var userid = data.userid
+												//alert(userid)
+												//用userid重定向
+												var stop = CertCtl.disconnect()
+												stop = JSON.parse(stop)
+												if (stop.resultFlag === 0) {
+													console.log('go to new tab with:' + userid)
+													window.location.href="./report.html?" + userid; 
+													//window.location.href="./hHouse/userdata/" + userid; 
+												} else {
+													showError('设备断开失败，请检查')
+													console.log(stop.errorMsg)
+												}
+											}
+											else if (data.msg) {
+												showError("该身份信息无档案！请刷新重试！")
+											}
+										},
+										error: function () {
+											//window.clearInterval(int)
+											showError("该身份信息无档案！请刷新重试！")
+											//alert('该身份信息无档案！请刷新重试！')
+										}
+									})
+								}
+							}
+							else {
+
+							}
+						}, 1000)
+					}
+					else {
+						console.log('请检查设备连接！')
+						console.log(conn.errorMsg)
+						console.log(open.errorMsg)
+						alert('请检查设备连接！')
+					}
+				}
+				else {
+					console.log(conn.errorMsg)
+					alert('请检查设备连接！')
+				}
+			}
+			catch (e){}
+		}
+
+		//跳转前等待页面
+		function showWait () {
+			var waitPage = document.createElement("div")
+			var pFooter = document.createElement("p")
+			var gif = document.createElement("img")
+			gif.setAttribute('src', '../static/images/loading.gif')
+			pFooter.innerHTML = "已识别到身份证，正在跳转"
+			waitPage.setAttribute('class', 'for-wait')
+			var body = document.getElementsByTagName("body")[0]
+			body.appendChild(waitPage)
+			var waitDiv = document.getElementsByClassName("wait-div")[0]
+			waitDiv.appendChild(pFooter)
+			waitDiv.appendChild(gif)
+		}
+
+		//跳转失败
+		function showError (msg) {
+			var body = document.getElementsByTagName("body")[0]
+			var errorDiv = document.createElement("div")
+			var btn = document.createElement("div")
+			var errorSpan = document.createElement("span") 
+			btn.setAttribute('class', 'error-btn')
+			errorSpan.innerHTML = msg
+			errorSpan.setAttribute('class', 'error-span')
+			btn.innerHTML = "确认"
+			btn.addEventListener('click', function () {
+				var forWait = document.getElementsByClassName("for-wait")[0]
+				body.removeChild(forWait)
+				body.removeChild(errorDiv)
+				window.location.reload()
+			})
+			errorDiv.appendChild(errorSpan)
+			errorDiv.appendChild(btn)
+			errorDiv.setAttribute('class', 'error-div')
+			var waitDiv = document.getElementsByClassName("wait-div")[0]
+			body.removeChild(waitDiv)
+			body.appendChild(errorDiv)
+		}
+
+	</script>
+</body>
+</html>

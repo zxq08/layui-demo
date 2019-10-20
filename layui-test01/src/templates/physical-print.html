@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>打印报告</title>
+	<meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="../static/css/css.css">
+  <style type="text/css">
+  	.BC-print {
+  		display: none;
+  	}
+  	@media print {
+  		.BC-print {
+  			display: block;
+  			width: 100%;
+  			height: 900px;
+  			overflow: hidden;
+  		}
+  		.BC-show {
+  			display: none;
+  		}
+  		.BC-print {
+  			page-break-before: always;
+  			page-break-after: always;
+  		}
+  		.BCTips {
+  			position: absolute;
+  			bottom: 0;
+  			left: 0;
+  			right: 0;
+  		}
+  	}
+  </style>
+</head>
+<body>
+	<div class="printer-box">
+		<div class="print-content">
+			<div class="phy-content-wrap">
+				<div class="phy-page-title">
+					<p>体检报告详情</p>
+				</div>
+				<div class="phy-page-content">
+					<div>
+						<span>尊敬的：</span>
+						<span class="phy-head-name">栾全松</span>
+						<p>
+							您于<span class="phy-head-name">2019年06月10日</span>参加了济宁市黄屯镇卫生院组织的国家基本公共卫生服务项目，现将您的体检结果反馈如下：
+						</p>
+					</div>
+					<div class="phy-page-body">
+						<!-- 个人健康信息 -->
+						<div class="phy-body-item">
+							<div class="phy-item-title">
+								<span>个人健康信息</span>
+							</div>
+							<div class="phy-item-body">
+								<div class="phy-item-wrap">
+									<div class="phy-item-col">
+										<span>姓名：</span>
+										<span>栾全松</span>
+									</div>
+									<div class="phy-item-col">
+										<span>性别：</span>
+										<span>男</span>
+									</div>
+									<div class="phy-item-col">
+										<span>年龄：</span>
+										<span>59</span>
+									</div>
+								</div>
+								<div class="phy-item-wrap">
+									<div class="phy-item-col">
+										<span>身份证号：</span>
+										<span>370822196001262831</span>
+									</div>
+									<div class="phy-item-col">
+										<span>电话：</span>
+										<span>13025648956</span>
+									</div>
+									<div class="phy-item-col">
+										<span>责任医生：</span>
+										<span>黄屯街道卫生院</span>
+									</div>
+								</div>
+								<div class="phy-item-wrap">
+									<div class="phy-item-col">
+										<span>身高：</span>
+										<span>171.5 CM</span>
+									</div>
+									<div class="phy-item-col">
+										<span>体重：</span>
+										<span>83.8 KG</span>
+									</div>
+									<div class="phy-item-col">
+										<span>BMI:</span>
+										<span>21</span>
+									</div>
+								</div>
+								<div class="phy-item-wrap">
+									<div class="phy-item-col">
+										<span>收缩压：</span>
+										<span>132 mmHg</span>
+									</div>
+									<div class="phy-item-col">
+										<span>舒张压：</span>
+										<span>84 mmHg</span>
+									</div>
+									<div class="phy-item-col">
+										<span>脉率：</span>
+										<span>78 次/分</span>
+									</div>
+								</div>
+								<div class="phy-item-wrap">
+									<div class="phy-item-col">
+										<span>内科：</span>
+										<span>未见异常</span>
+									</div>
+									<div class="phy-item-col">
+										<span>外科：</span>
+										<span>未见异常</span>
+									</div>
+									<div class="phy-item-col">
+									</div>
+								</div>
+								<div class="phy-item-wrap">
+									<div class="phy-item-col last-div">
+										<span>体质辨识结果：</span>
+										<span>气郁质</span>
+									</div>
+								</div>
+								<div class="phy-item-wrap">
+									<div class="phy-item-col last-div">
+										<span>❄ 血瘀体质是指当人体脏腑功能失调时，易出现体内血液运行不畅或内出血不能消散而成瘀血内阻的体质</span>
+									</div>
+								</div>
+							</div>
+							<div class="phy-item-wrap phy-item-footer">
+								<span>检测日期：</span>
+								<span>2019年9月19日</span>
+							</div>
+						</div>
+						<!-- 血生化 -->
+						<div class="phy-body-item">
+							<div class="phy-item-title">
+								<span>血生化</span>
+							</div>
+							<div class="phy-item-body">
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>项目</span>
+										</div>
+										<div class="phy-item-col">
+											<span>结果</span>
+										</div>
+										<div class="phy-item-col">
+											<span>单位</span>
+										</div>
+										<div class="phy-item-col">
+											<span>范围</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>项目</span>
+										</div>
+										<div class="phy-item-col">
+											<span>结果</span>
+										</div>
+										<div class="phy-item-col">
+											<span>单位</span>
+										</div>
+										<div class="phy-item-col">
+											<span>范围</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>丙氨酸氨基转移酶</span>
+										</div>
+										<div class="phy-item-col">
+											<span>52.4 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span>IU/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-40</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>总胆红素</span>
+										</div>
+										<div class="phy-item-col">
+											<span>34.4 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span>IU/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-34</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>谷草转氨酶</span>
+										</div>
+										<div class="phy-item-col">
+											<span>34.4 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span>IU/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-34</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>葡萄糖</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3.17 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-3.1</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>低密度脂蛋白胆固醇</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3.17 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-3.1</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>尿素</span>
+										</div>
+										<div class="phy-item-col">
+											<span>4.76</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-5.69</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>总胆固醇</span>
+										</div>
+										<div class="phy-item-col">
+											<span>4.76</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-5.69</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>肌酐</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>血高密度脂蛋白胆固醇</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>甘油三酯</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0.99</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0.4-1.81</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>谷草/谷丙</span>
+										</div>
+										<div class="phy-item-col">
+											<span>51.4 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-40</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="phy-item-wrap phy-item-footer">
+								<span>检测日期：</span>
+								<span>2019年9月19日</span>
+							</div>
+						</div>
+						<!-- 血常规 -->
+						<div class="phy-body-item">
+							<div class="phy-item-title">
+								<span>血常规</span>
+							</div>
+							<div class="phy-item-body">
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>项目</span>
+										</div>
+										<div class="phy-item-col">
+											<span>结果</span>
+										</div>
+										<div class="phy-item-col">
+											<span>单位</span>
+										</div>
+										<div class="phy-item-col">
+											<span>范围</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>项目</span>
+										</div>
+										<div class="phy-item-col">
+											<span>结果</span>
+										</div>
+										<div class="phy-item-col">
+											<span>单位</span>
+										</div>
+										<div class="phy-item-col">
+											<span>范围</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>白细胞</span>
+										</div>
+										<div class="phy-item-col">
+											<span>7.76</span>
+										</div>
+										<div class="phy-item-col">
+											<span>10^9/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>4-10</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>血红蛋白</span>
+										</div>
+										<div class="phy-item-col">
+											<span>34.4 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span>IU/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-34</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>中性粒细胞百分比</span>
+										</div>
+										<div class="phy-item-col">
+											<span>68.9</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>50-70</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>红细胞压积</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3.17 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span>IU/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-3.1</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>淋巴细胞百分比</span>
+										</div>
+										<div class="phy-item-col">
+											<span>24.5</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>20-40</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>平均红细胞体积</span>
+										</div>
+										<div class="phy-item-col">
+											<span>4.76</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0-5.69</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>单核细胞百分比</span>
+										</div>
+										<div class="phy-item-col">
+											<span>5.1</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3-12</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>平均血红蛋白量</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>嗜酸性粒细胞百分比</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.4</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0.5-5</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>平均血红蛋白浓度</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0.99</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>0.4-1.81</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>嗜碱性粒细胞百分比</span>
+										</div>
+										<div class="phy-item-col">
+											<span>5.1</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3-12</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>红细胞分布宽度(SD)</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>淋巴细胞绝对值</span>
+										</div>
+										<div class="phy-item-col">
+											<span>5.1</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3-12</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>红细胞分布宽值(CV)</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>单核细胞绝对值</span>
+										</div>
+										<div class="phy-item-col">
+											<span>5.1</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3-12</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>血小板</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>嗜酸性粒细胞绝对值</span>
+										</div>
+										<div class="phy-item-col">
+											<span>5.1</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3-12</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>血小板压积</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>嗜碱性粒细胞绝对值</span>
+										</div>
+										<div class="phy-item-col">
+											<span>5.1</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3-12</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>平均血小板体积</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>红细胞</span>
+										</div>
+										<div class="phy-item-col">
+											<span>5.1</span>
+										</div>
+										<div class="phy-item-col">
+											<span>%</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3-12</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>血小板分布宽度</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.13</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span>1.07-1.89</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap phy-item-footer">
+									<span>检测日期：</span>
+									<span>2019年9月19日</span>
+								</div>
+							</div>
+						</div>
+						<!-- 尿常规 -->
+						<div class="phy-body-item">
+							<div class="phy-item-title">
+								<span>尿常规</span>
+							</div>
+							<div class="phy-item-body">
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>项目</span>
+										</div>
+										<div class="phy-item-col">
+											<span>结果</span>
+										</div>
+										<div class="phy-item-col">
+											<span>单位</span>
+										</div>
+										<div class="phy-item-col">
+											<span>范围</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>项目</span>
+										</div>
+										<div class="phy-item-col">
+											<span>结果</span>
+										</div>
+										<div class="phy-item-col">
+											<span>单位</span>
+										</div>
+										<div class="phy-item-col">
+											<span>范围</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>尿潜血</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>PH</span>
+										</div>
+										<div class="phy-item-col">
+											<span>3.17 ↑</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span>5-9</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>尿白细胞</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>葡萄糖</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span>阴性</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>亚硝酸盐</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>尿蛋白</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span>阴性</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>比重</span>
+										</div>
+										<div class="phy-item-col">
+											<span>4.76</span>
+										</div>
+										<div class="phy-item-col">
+											<span>mmol/L</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>胆红素</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span>阴性</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>抗坏血酸</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span>阴性</span>
+										</div>
+									</div>
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>尿胆原</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span>阴性</span>
+										</div>
+									</div>
+								</div>
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<div class="phy-item-col">
+											<span>酮体</span>
+										</div>
+										<div class="phy-item-col">
+											<span>-</span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+										<div class="phy-item-col">
+											<span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="phy-item-wrap phy-item-footer">
+								<span>检测日期：</span>
+								<span>2019年9月19日</span>
+							</div>
+						</div>
+						<!-- 腹部B超 -->
+						<div class="phy-body-item BC-show">
+							<div class="phy-item-title">
+								<span>腹部B超</span>
+							</div>
+							<div class="phy-item-body">
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<img src="" onerror="onerror='';src='./img/img-error.png'">
+									</div>
+									<div class="left-wrap">
+										<img src="" onerror="onerror='';src='./img/img-error.png'">
+									</div>
+								</div>
+								<div class="B-item-wrap">
+									<p class="B-title">超声所见：</p>
+									<div class="B-content">
+										<p>1.肝脏：轮廓清晰</p>
+										<p>2.胆囊：大小56mm×20mm</p>
+										<p>3.脾脏：厚度34mm</p>
+										<p>4.双肾：左肾正常，右肾正常</p>
+									</div>
+								</div>
+								<div class="B-item-wrap">
+									<p class="B-title">超声提示：</p>
+									<div class="B-content">
+										<p>肝脏、胆囊、脾脏、双肾均未见异常</p>
+									</div>
+								</div>
+							</div>
+							<div class="phy-item-wrap phy-item-footer">
+								<span>检测日期：</span>
+								<span>2019年9月19日</span>
+							</div>
+						</div>
+						<!-- B超打印 -->
+						<div class="phy-body-item BC-print">
+							<div class="phy-item-title">
+								<span>腹部B超</span>
+							</div>
+							<div class="phy-item-body">
+								<div class="phy-item-wrap nopadding">
+									<div class="left-wrap">
+										<img src="" onerror="onerror='';src='./img/img-error.png'">
+									</div>
+									<div class="left-wrap">
+										<img src="" onerror="onerror='';src='./img/img-error.png'">
+									</div>
+								</div>
+								<div class="B-item-wrap">
+									<p class="B-title">超声所见：</p>
+									<div class="B-content">
+										<p>1.肝脏：轮廓清晰</p>
+										<p>2.胆囊：大小56mm×20mm</p>
+										<p>3.脾脏：厚度34mm</p>
+										<p>4.双肾：左肾正常，右肾正常</p>
+									</div>
+								</div>
+								<div class="B-item-wrap BCTips">
+									<p class="B-title">超声提示：</p>
+									<div class="B-content">
+										<p>肝脏、胆囊、脾脏、双肾均未见异常</p>
+									</div>
+								</div>
+							</div>
+							<div class="phy-item-wrap phy-item-footer">
+								<span>检测日期：</span>
+								<span>2019年9月19日</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 之后是.print-content勾选部分 -->
+		</div>
+	</div>
+</body>
+</html>

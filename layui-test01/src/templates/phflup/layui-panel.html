@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <title>layui-panel</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="../../static/layui/layui/css/layui.css">
+  <style type="text/css">
+  	@keyframes dis-tran-show{
+  		0% {
+  			opacity: 0;
+  		}
+  		100% {
+  			opacity: 1;
+  		}
+  	}
+  	.layui-colla-content{
+  		animation: dis-tran-show 1s ease-out;
+  	}
+  </style>
+</head>
+<body>
+	<div style="width: 1000px;height: 500px;background: #eee;margin: 0 auto;">
+		<div class="layui-collapse" lay-filter="form-item">
+			<div class="layui-colla-item">
+		    <h2 class="layui-colla-title">
+		    	为什么前端工程师多不愿意用 Bootstrap 框架？
+		    </h2>
+		    <div class="layui-colla-content">
+		    	因为需要更先进优秀的框架
+          <button id="btn">123</button>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<script src="../../static/layui/layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use(['form', 'element', 'layer'], function () {
+		  var form = layui.form
+		  var element = layui.element
+		  var layer = layui.layer
+
+      element.on('collapse(form-item)', function(data){
+        console.log( data.content[0]);
+      });
+		})
+    window.onload = function () {
+      var btn = document.getElementById('btn')
+      btn.addEventListener('click', function () {
+        var url = "./table.html?id=" + window.btoa(window.encodeURIComponent("1232"))
+        console.log(url)
+        var encode = url.split('?')[1]
+        console.log(window.decodeURIComponent(window.atob(encode)))
+        
+        //window.location.href = "./table.html?" +window.btoa(window.encodeURIComponent("id=1232"))
+      })
+    }
+	</script>
+</body>
+</html>

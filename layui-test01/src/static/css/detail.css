@@ -1,0 +1,313 @@
+.record-head{
+	display: flex;
+	width: 100%;
+	height: 3rem;
+	color: #fff;
+	box-sizing: border-box;
+	background: -webkit-linear-gradient(left, #28a1d9 0%,#12b8d5 100%);
+	padding: .5rem 0;
+	justify-content: center;
+	align-items: center;
+}
+.form-body{
+	margin: 2vw 4vw;
+}
+.head-wrap{
+	box-sizing: border-box;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #28a1d9;
+}
+.head-title{
+	font-size: 24px;
+	font-weight: 1000;
+}
+.layui-colla-title{
+	font-weight: 700;
+	font-size: 16px;
+}
+.form-head{
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	width: 80vw;
+	flex-wrap: wrap;
+}
+.head-info{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.info > .info-name{
+	font-weight: 700
+}
+.form-way{
+	display: flex;
+	align-items: center;
+}
+.form-way .input-box-item{
+	width: 14vw;
+}
+.head.right{
+	margin-left: .7rem;
+}
+.form-head .head > .input-box-value{
+	width: 100%;
+}
+.form-way span{
+	margin: 6px 10px 0 0;
+}
+.head .head-title{
+	font-size: 14px;
+	font-weight: normal;
+	display: inline-block;
+	width: 5.2vw;
+}
+.form-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.form-box .layui-form-checkbox span
+{
+	color: #333;
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.form-box-title{
+	display: block;
+	color: #28a1d9;
+}
+.form-input-box{
+	flex: 1;
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 1%;
+	margin: 10px 0;
+}
+.form-input-box .layui-unselect{
+	min-width: 12%;
+}
+.other{
+	display: flex;
+}
+.other > .check-other{
+	margin-top: -10px;
+	width: auto;
+}
+.other > .input-other{
+	margin-top: 10px;
+	flex-grow: 1;
+}
+.other-input{
+	margin-top: 8px;
+	border-bottom: 1px solid #333;
+	display: inline-block;
+	width: 80vw;
+}
+.input-box-item{
+	display: flex;
+	padding-top: 5px;
+	justify-content: left;
+	align-items: center;
+	margin-top: 10px;
+}
+.input-box-item > div {
+	width: 24%;
+}
+.organ .input-box-item > div{
+	width: 12%;
+}
+.input-box-item > .item-both {
+	width: 48%;
+}
+.warn-text .input-box-name{
+	color: #f44336;
+}
+.no-warn .input-box-name{
+	color: #000;
+}
+.input-box-item .input-box-name{
+/*	font-weight: 700;*/
+}
+.input-box-item .input-box-value{
+	display: inline-block;
+	padding: 0 5px;
+	margin: 0 5px;
+	width: 25%;
+	border: 0px solid #333;
+	border-bottom-width: 1px; 
+}
+.input-box-item.radio-box-item{
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+.input-box-item.radio-box-item div {
+	width: auto;
+}
+.input-box-title.radio-title{
+	margin: 6px 10px 0 0;
+	vertical-align: middle;
+}
+.input-box-item .lines-wrap{
+	display: flex;
+	flex-direction: column;
+}
+.input-box-item .layui-form-checkbox{
+	margin-top: 0 !important;
+}
+.input-box-item .input-box-value.input{
+	width: 50%;
+}
+.input-box-item .reason-box{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.left-title{
+	width: auto !important;
+	padding-right: 10px;
+}
+.reason-other{
+	width: 80vw;
+}
+.classes{
+	width: 80vw;
+	margin-top: 5px;
+}
+.classes > .input-box-value{
+	width: 80vw;
+}
+.input-box-item .input-box-value.mationed{
+	font-size: 24px;
+	font-weight: 700;
+	color: #FF5722;
+	width: 80vw;
+}
+.footer .form-input-box{
+	border: none;
+}
+.footer .input-box-item .input-box-value{
+	width: auto;
+}
+.footer .input-box-item .footer-item{
+	width: 30%;
+}
+.input-box-item .input-box-value.input-rest{
+    width: 80%;
+    height: 20px;
+}
+.form-input-value.alone{
+	padding-left: 1%;
+	display: inline-block;
+	width: 80vw;
+	border-bottom: 1px solid #333;
+	margin-left: 20px;
+}
+.alone{
+	display: block;
+}
+.more-btn{
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 18px;
+	overflow: hidden;
+}
+.more-btn2{
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 18px;
+}
+.more-wrap{
+	max-height: 0;
+	overflow: hidden;
+	margin-bottom: 15px;
+	transition: max-height 1s;
+	-moz-transition: max-height 1s; /* Firefox 4 */
+	-webkit-transition: max-height .8s; /* Safari 和 Chrome */
+	-o-transition: max-height 1s; /* Opera */
+}
+.more-wrap .layui-form-item:last-child{
+	margin-bottom: 0;
+}
+.organ .input-box-item > div.after-checkbox{
+	width: 30%;
+}
+.input-box-item .center-title{
+	display: inline-block;
+	width: 25%;
+	padding: 0 5px;
+  margin: 0 5px;
+	text-align: center;
+}
+.input-box-item .center-value{
+	text-align: center;
+}
+.input-box-item .center-title.hospital::before{
+	content: "*";
+	color: #f44336;
+}
+.checkbox-item{
+	display: inline-block;
+	position: relative;
+	left: -5.8vw;
+	top: 7px;
+  /*margin: 10px 0 0 -6vw;*/
+}
+.checkbox-item .checkbox-title{
+	padding-left: 5px;
+}
+.checkbox-item .checkbox-value{
+	display: inline-block;
+	width: 50px;
+  border: 0px solid #333;
+  border-bottom-width: 1px;
+}
+.checkbox-item.noleft{
+	left: 0;
+}
+.checkbox-item.noleft .checkbox-value{
+	width: 62.5vw;
+	margin-left: -2.5vw;
+}
+@keyframes dis-tran-show{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes dis-tran-hide{
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.layui-colla-content{
+	animation: dis-tran-show .5s ease-out;
+}
+#openImg{
+	width: 30px;
+	height: 30px;
+	margin-left: -30px;
+	cursor: pointer;
+}
+.other div.layui-unselect{
+	width: 4vw;
+	min-width: 4vw;
+}
+.other .layui-unselect span{
+	width: 3vw;
+}
