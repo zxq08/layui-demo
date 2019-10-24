@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../static/layui/layui/css/layui.css"  media="all">
 </head>
 <body> 
- 
+
 <div class="demoTable">
   搜索ID：
   <div class="layui-inline">
@@ -22,23 +22,44 @@
                
           
 <script src="../static/layui/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>
+var demoData = [{
+      "id": "10001"
+      ,"username": "2019-10-01"
+      ,"sex": "2019-10-31"
+      ,"city": "北京恩福团队"
+      ,"sign": "北京恩福"
+      ,"experience": "执行中"
+      ,"score": ''
+    }, {
+      "id": "10002"
+      ,"username": "2019-10-01"
+      ,"sex": "2019-10-31"
+      ,"city": "北京恩福团队1"
+      ,"sign": "北京恩福1"
+      ,"experience": "执行中"
+      ,"score": ''
+    }];
+
 layui.use('table', function(){
   var table = layui.table;
   
   //方法级渲染
   table.render({
     elem: '#LAY_table_user'
-    ,url: ''
+    ,data: demoData
     ,cols: [[
       {checkbox: true, fixed: true}
-      ,{field:'id', title: '序号', sort: true, fixed: true}
-      ,{field:'startDate', title: '签约时间'}
-      ,{field:'endDate', title: '到期时间', sort: true}
-      ,{field:'familyTeam', title: '家庭医生团队'}
-      ,{field:'familyCharge', title: '家庭责任人'}
-      ,{field:'state', title: '执行状态', sort: true}
-      ,{field:'operation', title: '操作', sort: true}
+      ,{field:'id', title: 'ID', width:80, sort: true, fixed: true}
+      ,{field:'username', title: '用户名', width:80}
+      ,{field:'sex', title: '性别', width:80, sort: true}
+      ,{field:'city', title: '城市', width:80}
+      ,{field:'sign', title: '签名'}
+      ,{field:'experience', title: '积分', sort: true, width:80}
+      ,{field:'score', title: '评分', sort: true, width:80}
+      ,{field:'classify', title: '职业', width:80}
+      ,{field:'wealth', title: '财富', sort: true, width:135}
     ]]
     ,id: 'testReload'
     ,page: true
@@ -48,10 +69,16 @@ layui.use('table', function(){
   var $ = layui.$, active = {
     reload: function(){
       var demoReload = $('#demoReload');
-      
       //执行重载
       table.reload('testReload', {
-        page: {
+        data: demoData.filter(function(data, index){ //layui.table.cache["testReload"]
+          var searchID =  demoReload.val()
+          if (searchID !== '') {
+            return data.id === searchID;
+          }
+          return data
+        })
+        ,page: {
           curr: 1 //重新从第 1 页开始
         }
         ,where: {

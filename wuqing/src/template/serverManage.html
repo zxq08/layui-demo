@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>服务管理</title>
+	<meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../static/layui/layui/css/layui.css"  media="all">
+  <link rel="stylesheet" type="text/css" href="../static/css/familyDoctor.css">
+</head>
+<body> 
+  <div class="layui-fluid">  
+    <div class="layui-card">
+      <div class="layui-card-header layuiadmin-card-header-auto"></div>
+      <div class="demoTable layui-form">
+        服务名称
+        <div class="layui-inline">
+          <input class="layui-input" name="id" id="teamReload" autocomplete="on">
+        </div>        
+        <button class="layui-btn" data-type="reload">
+          <i class="layui-icon layui-icon-search"></i>
+        </button>
+        <button class="layui-btn" data-type="reload">
+          新增
+        </button>
+      </div>
+      <table class="layui-card-body layui-hide" id="LAY_table_user" lay-filter="user"></table> 
+    </div>
+  </div>             
+          
+<script src="../static/layui/layui/layui.js" charset="utf-8"></script>
+<script type="text/html" id="editServer">
+  <div>
+  	<button type="button" class="layui-btn layui-btn-sm" data-id="{{d.id}}" lay-filter="edit" lay-event="edit">编辑</button>
+  	<button type="button" class="layui-btn layui-btn-sm" data-id="{{d.id}}" lay-filter="delete" lay-event="delete">删除</button>
+  </div>
+</script>
+<script>
+var demoData = [{
+      "id": "10001"
+      ,"serverName": "基础健康管理"
+      ,"serverContent": "啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管"
+      ,"cost": "100"
+      ,"operation": ''
+    }, {
+      "id": "10002"
+      ,"serverName": "高级健康管理"
+      ,"serverContent": "啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管"
+      ,"cost": "0"
+      ,"operation": ''
+    }, {
+      "id": "10003"
+      ,"serverName": "家庭病床"
+      ,"serverContent": "啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管"
+      ,"cost": "60"
+      ,"operation": ''
+    }, {
+      "id": "10004"
+      ,"serverName": "基础健康管理"
+      ,"serverContent": "啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管，啥都管"
+      ,"cost": "120"
+      ,"operation": ''
+    }];
+
+layui.use(['table', 'laydate'], function(){
+  var table = layui.table;
+  var laydate = layui.laydate;
+  
+  laydate.render({
+    elem: '#sTimeReload'
+  })
+  //方法级渲染
+  table.render({
+    elem: '#LAY_table_user'
+    ,data: demoData
+    ,cols: [[
+      {field:'id', title: '序号'}
+      ,{field:'serverName', title: '服务名称'}
+      ,{field:'serverContent', title: '服务内容'}
+      ,{field:'cost', title: '价格（元）'}
+      ,{field:'operation', title: '操作', templet: '#editServer'}
+    ]]
+    ,id: 'testReload'
+    ,page: true
+    ,height: 500
+  });
+  
+  var $ = layui.$, active = {
+    reload: function(){
+      var state = $('#state option:selected');
+      var sTimeReload = $('#sTimeReload');
+      var teamReload = $('#teamReload');
+      var chargeReload = $('#chargeReload');
+      var searchOptions = {
+            state: state.val(),
+            sDate: sTimeReload.val(),
+            team: teamReload.val(),
+            charge: chargeReload.val()
+          }
+      
+      //执行重载
+      table.reload('testReload', {
+        // 本地数据筛查
+        data: demoData.filter(function(data, index){ //layui.table.cache["testReload"]
+          if (searchOptions.sDate !== '') {
+            return data.startDate === searchOptions.sDate;
+          }
+          return data
+        })
+        ,page: {
+          curr: 1 //重新从第 1 页开始
+        }
+        // 发送请求筛查
+        ,where: {
+          key: {
+            state: searchOptions.state,
+            sDate: searchOptions.sDate,
+            team: searchOptions.team,
+            charge: searchOptions.charge
+          }
+        }
+      }, 'data');
+    }
+  };
+
+  table.on('tool(user)', function (obj) {
+    var layEvent = obj.event;
+    console.log(layEvent)
+  })
+  
+  $('.demoTable .layui-btn').on('click', function(){
+    var type = $(this).data('type');
+    active[type] ? active[type].call(this) : '';
+  });
+});
+</script>
+
+</body>
+</html>
